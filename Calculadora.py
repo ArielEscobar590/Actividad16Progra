@@ -2,7 +2,7 @@ import tkinter as tk
 
 ventana = tk.Tk()
 ventana.title("Calculadora")
-ventana.geometry("600x800")
+ventana.geometry("600x600")
 
 etiqueta = tk.Label(ventana, text="Escribe los números:")
 etiqueta.pack(pady=5)
@@ -14,23 +14,23 @@ num2 = tk.Entry(ventana)
 num2.pack(pady=5)
 
 def sumar():
-    numero1 = num1.get()
-    numero2 = num2.get()
+    numero1 = float(num1.get())
+    numero2 = float(num2.get())
     etiqueta.config(text=f"Resultado: {numero1 + numero2}!")
 
 def restar():
-    numero1 = num1.get()
-    numero2 = num2.get()
+    numero1 = float(num1.get())
+    numero2 = float(num2.get())
     etiqueta.config(text=f"Resultado: {numero1 - numero2}!")
 
 def multiplicar():
-    numero1 = num1.get()
-    numero2 = num2.get()
+    numero1 = float(num1.get())
+    numero2 = float(num2.get())
     etiqueta.config(text=f"Resultado: {numero1 * numero2}!")
 
 def dividir():
-    numero1 = num1.get()
-    numero2 = num2.get()
+    numero1 = float(num1.get())
+    numero2 = float(num2.get())
     if numero2 == 0:
         etiqueta.config(text=f"Resultado: No se puede dividir por zero!")
     else:
